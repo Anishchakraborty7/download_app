@@ -1,24 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Video Splitter App</title>
+    <meta charset="UTF-8">
+    <title>Video Splitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h2>Upload Video & Generate Clips</h2>
+<div class="container">
+    <div class="card">
+        <h1>🎬 Video Splitter</h1>
+        <p class="subtitle">
+            Upload a video, choose duration, and download perfectly split clips.
+        </p>
 
-<form method="POST" enctype="multipart/form-data">
-    <label>Upload Video:</label><br>
-    <input type="file" name="video" required><br><br>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Upload Video</label>
+                <input type="file" name="video" required>
+            </div>
 
-    <label>Min Duration (minutes):</label><br>
-    <input type="number" name="min_duration" value="5" min="1" required><br><br>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Min Duration (minutes)</label>
+                    <input type="number" name="min_duration" value="5" min="1" required>
+                </div>
 
-    <label>Max Duration (minutes):</label><br>
-    <input type="number" name="max_duration" value="7" min="1" required><br><br>
+                <div class="form-group">
+                    <label>Max Duration (minutes)</label>
+                    <input type="number" name="max_duration" value="7" min="1" required>
+                </div>
+            </div>
 
-    <button type="submit">Generate Clips</button>
-</form>
+            <button type="submit" class="btn">
+                Generate Clips
+            </button>
+        </form>
+
+        <p class="footer-text">
+            Videos are processed securely and deleted automatically.
+        </p>
+    </div>
+</div>
 
 </body>
 </html>
+
