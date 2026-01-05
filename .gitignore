@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.env/
+
+# User data & generated files
+uploads/
+clips/
+
+# Zip files
+*.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
